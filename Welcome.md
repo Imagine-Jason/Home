@@ -11,7 +11,7 @@
 ------------
 如果你是参与Aiursoft的新人，想要快速了解它的整套技术体系，请参考下面内容：
 
-* [学习路线图](./Before Starting.md)
+* [学习路线图](./Before%20starting.md)
 * [API表](#)
 * [SDK下载](#)
 * [快速构建一个基于Aiursoft的项目](#)
