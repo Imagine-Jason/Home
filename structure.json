@@ -1,64 +1,18 @@
 [
     {
-        "collectionId": 1,
-        "collectionTitle": "Example Collection0",
+        "collectionTitle": "Gettings Started",
         "articles": [
             {
-                "articleId": 1,
-                "articleTitle": "Example Article0of Collection0",
-                "createTime": "2018-01-18T11:16:01.2163441"
-            },
+                "articleTitle": "Home"
+            }
+        ]
+    },
+    {
+        "collectionTitle": "Authentication",
+        "articles": [
             {
                 "articleId": 2,
-                "articleTitle": "Example Article1of Collection0",
-                "createTime": "2018-01-18T11:16:01.2248203"
-            },
-            {
-                "articleId": 3,
-                "articleTitle": "Example Article2of Collection0",
-                "createTime": "2018-01-18T11:16:01.2255313"
-            }
-        ]
-    },
-    {
-        "collectionId": 2,
-        "collectionTitle": "Example Collection1",
-        "articles": [
-            {
-                "articleId": 4,
-                "articleTitle": "Example Article0of Collection1",
-                "createTime": "2018-01-18T11:16:01.2576229"
-            },
-            {
-                "articleId": 5,
-                "articleTitle": "Example Article1of Collection1",
-                "createTime": "2018-01-18T11:16:01.2577487"
-            },
-            {
-                "articleId": 6,
-                "articleTitle": "Example Article2of Collection1",
-                "createTime": "2018-01-18T11:16:01.2577926"
-            }
-        ]
-    },
-    {
-        "collectionId": 3,
-        "collectionTitle": "Example Collection2",
-        "articles": [
-            {
-                "articleId": 7,
-                "articleTitle": "Example Article0of Collection2",
-                "createTime": "2018-01-18T11:16:01.2633445"
-            },
-            {
-                "articleId": 8,
-                "articleTitle": "Example Article1of Collection2",
-                "createTime": "2018-01-18T11:16:01.2634162"
-            },
-            {
-                "articleId": 9,
-                "articleTitle": "Example Article2of Collection2",
-                "createTime": "2018-01-18T11:16:01.2634669"
+                "articleTitle": "OAuth"
             }
         ]
     }
