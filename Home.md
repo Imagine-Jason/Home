@@ -1,6 +1,7 @@
 # Welcome to Aiursoft Wiki Center!
 
 Welcome! 
+
 The current document is the starting point to engage in and learn about Aiursoft API stack.
 
     Note: please note that this article is not for filing product issues. If you run into an issue using Aiursoft API, there are multiple articles and repos where you can file an issue.

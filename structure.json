@@ -1,19 +1,18 @@
-[
-    {
+[{
         "collectionTitle": "Gettings Started",
-        "articles": [
-            {
-                "articleTitle": "Home"
-            }
-        ]
+        "articles": [{
+            "articleTitle": "Welcome"
+        }, {
+            "articleTitle": "Before starting"
+        }]
+    },
+    {
+        "collectionTitle": "Get Involed"
     },
     {
         "collectionTitle": "Authentication",
-        "articles": [
-            {
-                "articleId": 2,
-                "articleTitle": "OAuth"
-            }
-        ]
+        "articles": [{
+            "articleTitle": "OAuth"
+        }]
     }
 ]
