@@ -1,32 +1,38 @@
-# Welcome to Aiursoft Wiki Center
+# 欢迎来到Aiursoft开发人员中心
 
-Welcome!
+欢迎!
 
-The current document is the starting point to engage in and learn about Aiursoft API stack.
+当前文档是关于Aiursoft技术栈的全部学习、接入、贡献的中心。
 
-    Note: please note that this article is not for filing product issues. If you run into an issue using Aiursoft API, there are multiple articles and repos where you can file an issue.
+    注明: 请注意，请不要把所有的Issue提到本Repo，而是将它们提交到具体的项目所在的Repo中。本Repo的Issue仅限Aiursoft的整体工单请求。
 
-## Get Started
-
-------------
-If you're new to Aiursoft and have 10 minutes to try it, start here: 
-
-* [Roadmap](#)
-* [Resetful API](#)
-* [SDK Download](#)
-
-
-If you have some more time and want to go deeper or even contribute:
-
-* [How to build from source](#)
-* [How to contribute](#)
-
-## Aiursoft Platform
+## 立即开始
 
 ------------
-The Aiursoft platform is made of several components, which includes the app validation system, oauth system, oss system, message queue and numerous applications like account system.
+如果你是参与Aiursoft的新人，想要快速了解它的整套技术体系，请参考下面内容：
 
-* [App Validation System]()
-* [OAuth System](#)
-* [OSS System](#)
-* [Message Queue](#)
+* [学习路线图](#)
+* [API表](#)
+* [SDK下载](#)
+* [快速构建一个基于Aiursoft的项目](#)
+
+
+如果你的时间充足，希望将全套技术体系应用到你自己的项目或企业中，请详细阅读下面内容：
+
+* [如何从源码编译](#)
+* [如何将全部项目部署在企业计算集群中](#)
+* [如何贡献](#)
+
+## Aiursoft平台
+
+------------
+Aiursoft平台是一个由众多组件构成的微服务平台，它的不同服务都包含了不同特性。这包括了应用权限认证和授权系统、用户统一身份认证、对象存储系统、消息队列、文档中心、账户管理中心等。
+
+* [应用认证系统]()
+* [用户认证系统](#)
+* [对象存储系统](#)
+* [消息队列](#)
+
+## 继续阅读？
+
+[]
