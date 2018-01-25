@@ -1,9 +1,9 @@
 [
     {
-        "collectionTitle": "Getting Started",
+        "collectionTitle": "Welcome",
         "articles": [
             {
-                "articleTitle": "Welcome"
+                "articleTitle": "Home"
             },
             {
                 "articleTitle": "Before starting"
@@ -19,10 +19,50 @@
         ]
     },
     {
+        "collectionTitle": "Deployment",
+        "articles": [
+            {
+                "articleTitle": "Getting Started"
+            }
+        ]
+    },
+    {
         "collectionTitle": "Authentication",
         "articles": [
             {
                 "articleTitle": "OAuth"
+            }
+        ]
+    },
+    {
+        "collectionTitle": "Object Storage",
+        "articles": [
+            {
+                "articleTitle": "What is OSS"
+            }
+        ]
+    },
+    {
+        "collectionTitle": "Message Queue",
+        "articles": [
+            {
+                "articleTitle": "What is Stargate"
+            }
+        ]
+    },
+    {
+        "collectionTitle": "Pylon",
+        "articles": [
+            {
+                "articleTitle": "What is Pylon"
+            }
+        ]
+    },
+    {
+        "collectionTitle": "Kahla",
+        "articles": [
+            {
+                "articleTitle": "What is Kahla"
             }
         ]
     }
