@@ -1,18 +1,29 @@
-[{
-        "collectionTitle": "Gettings Started",
-        "articles": [{
-            "articleTitle": "Welcome"
-        }, {
-            "articleTitle": "Before starting"
-        }]
+[
+    {
+        "collectionTitle": "Getting Started",
+        "articles": [
+            {
+                "articleTitle": "Welcome"
+            },
+            {
+                "articleTitle": "Before starting"
+            }
+        ]
     },
     {
-        "collectionTitle": "Get Involed"
+        "collectionTitle": "Get Involed",
+        "articles": [
+            {
+                "articleTitle": "How to contribute"
+            }
+        ]
     },
     {
         "collectionTitle": "Authentication",
-        "articles": [{
-            "articleTitle": "OAuth"
-        }]
+        "articles": [
+            {
+                "articleTitle": "OAuth"
+            }
+        ]
     }
 ]
