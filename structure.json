@@ -1,9 +1,9 @@
 [{
         "collectionTitle": "Gettings Started",
         "articles": [{
-            "articleTitle": "Before starting"
-        }, {
             "articleTitle": "Welcome"
+            }, {
+                "articleTitle": "Before starting"
         }]
     },
     {
