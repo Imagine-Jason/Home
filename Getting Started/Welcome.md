@@ -21,7 +21,7 @@
 
 * [如何从源码编译](#)
 * [如何将全部项目部署在企业计算集群中](#)
-* [如何贡献](./How%20to%20contribute.md)
+* [如何贡献](../Getting%20Involed/How%20to%20contribute.md)
 
 ## Aiursoft平台
 
