@@ -1,0 +1,12 @@
+server {
+	listen *:443    ssl;
+	server_name     api.aiursoft.com;
+	ssl_certificate /home/anduin/Certs/API/214493462060091.pem;
+	ssl_certificate_key /home/anduin/Certs/API/214493462060091.key;
+	include	SSLOptions.conf;
+	location / {
+		proxy_pass  http://localhost:5001;
+		limit_req   zone=one burst=10;
+	}
+}
+

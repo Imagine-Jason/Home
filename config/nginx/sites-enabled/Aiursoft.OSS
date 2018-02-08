@@ -1,0 +1,12 @@
+server {
+	listen *:443    ssl;
+	server_name     oss.aiursoft.com;
+	ssl_certificate /home/anduin/Certs/OSS/214495118110091.pem;
+	ssl_certificate_key /home/anduin/Certs/OSS/214495118110091.key;
+	include	SSLOptions.conf;
+	location / {
+		proxy_pass  http://localhost:5002;
+		limit_req   zone=one burst=10;
+	}
+}
+
