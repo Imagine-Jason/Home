@@ -149,8 +149,6 @@
 
 说明：
 
-使用WebSocket连接后，所有该频道的消息都会通过WebSocket的onmessage事件被客户端触发。请参考[前端调用方法](https://github.com/AiursoftWeb/Stargate/blob/master/src/Views/Home/Test.cshtml)。
+使用WebSocket连接后，所有该频道的消息都会通过WebSocket的onmessage事件被客户端触发。请参考:
 
-## 反馈或建议修改API
-
-[Github](https://github.com/AiursoftWeb/Stargate)
+[前端调用方法](https://github.com/AiursoftWeb/Stargate/blob/master/src/Views/Home/Test.cshtml)。

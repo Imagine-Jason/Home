@@ -29,5 +29,5 @@
 
 如果你需要在你的项目中使用星门，请遵循下列步骤
 
-* 在[Aiursoft Developer Center](https://developer.aiursoft.com)创建一个新的App
-* 阅读星门的[API文档](./API Document.md)
+* [在Aiursoft Developer Center创建一个新的App](https://developer.aiursoft.com/Apps)
+* [阅读星门的API文档](./API%20Document.md)
