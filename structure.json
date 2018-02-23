@@ -46,10 +46,13 @@
         ]
     },
     {
-        "collectionTitle": "Message Queue",
+        "collectionTitle": "Stargate",
         "articles": [
             {
                 "articleTitle": "What is Stargate"
+            },
+            {
+                "articleTitle": "API Document"
             }
         ]
     },
