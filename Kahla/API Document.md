@@ -15,6 +15,22 @@ API地址分别是：
 
 文档之后的请求地址，均表示在上面的API地址后增加的内容。
 
+
+## 身份认证
+
+卡拉的服务器采用了HTTP Authorization头进行身份认证。也就是说，在访问所有需要登录权限的API时，必须增加自定义HTTP头：
+
+    Authorization:Bearer {Credential}
+
+其中，`Credential`值为你在登录时获取到的凭据。
+
+## API目录
+
+* [密码认证](#密码认证)
+* [注册账号](#注册账号)
+* [查询登录状态](#查询登录状态)
+
+
 ### 密码认证
 
 请求地址：
@@ -68,7 +84,7 @@ API地址分别是：
 }
 ```
 
-### 注册新的Aiursoft账号
+### 注册账号
 
 请求地址：
 
@@ -101,7 +117,6 @@ API地址分别是：
 
 错误返回值示例：
 
-
 ```json
 //参数不符合规范
 {
@@ -110,5 +125,29 @@ API地址分别是：
     ],
     "code": -10,
     "message": "Your input contains several errors!"
+}
+```
+
+### 查询登录状态
+
+请求地址：
+
+    /SigninStatus
+
+方法
+
+    HTTP GET
+
+接口说明：
+
+    本接口能够查询当前用户的登录状态。请注意增加文档开头部分提到的HTTP头。
+
+返回值示例：
+
+```json
+{
+    "value": true,
+    "code": 0,
+    "message": "Successfully get your signin status."
 }
 ```
