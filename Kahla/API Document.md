@@ -39,9 +39,76 @@ API地址分别是：
 
 返回值示例：
 
-    {
-        "value": "FS1S6CV0BASLHWUVE87851PN8GRZNJ",
-        "code": 0,
-        "message": "Auth success."
-    }
+```json
+{
+    "value": "FS1S6CV0BASLHWUVE87851PN8GRZNJ",
+    "code": 0,
+    "message": "Auth success."
+}
+```
 
+错误返回值示例：
+
+```json
+//用户名或密码错误
+{
+    "code": -8,
+    "message": "Incorrect username or password."
+}
+```
+
+```json
+//参数不符合规范
+{
+    "items": [
+        "The Email field is not a valid e-mail address."
+    ],
+    "code": -10,
+    "message": "Your input contains several errors!"
+}
+```
+
+### 注册新的Aiursoft账号
+
+请求地址：
+
+    /RegisterKahla
+
+方法
+
+    HTTP POST
+
+表单：
+
+    Email={Kahla Users Email}&Password={User Password}&ConfirmPassword={Confirm password}
+
+表单编码：
+
+    x-www-form-urlencoded
+
+接口说明：
+
+    本接口能够允许卡拉的用户进行注册。注册后，用户将自动授权卡拉访问他的Aiursoft账号接口。
+
+返回值示例：
+
+```json
+{
+    "code": 0,
+    "message": "Successfully created your account."
+}
+```
+
+错误返回值示例：
+
+
+```json
+//参数不符合规范
+{
+    "items": [
+        "The Email field is not a valid e-mail address."
+    ],
+    "code": -10,
+    "message": "Your input contains several errors!"
+}
+```

@@ -8,7 +8,7 @@
 
     /Channel/ViewMyChannels?AccessToken=eaae66eae336cbd56bb48dbd810f1551
 
-方法：  
+方法：
 
     HTTP GET
 
@@ -18,6 +18,7 @@
 
 返回值示例：
 
+```json
     {
         "appId": "6abfa8e1b43a99b36dc82acf57467787",
         "channel": [
@@ -41,6 +42,7 @@
         "code": 0,
         "message": "Successfully get your channels!"
     }
+```
 
 ### 创建一个新的频道
 
@@ -48,7 +50,7 @@
 
     /Channel/CreateChannel
 
-方法：  
+方法：
 
     HTTP POST
 
@@ -66,12 +68,14 @@
 
 返回值示例：
 
+```json
     {
         "channelId": 3,
         "connectKey": "SR943GQSQQ8ULRB6OHFJ",
         "code": 0,
         "message": "Successfully created your channel!"
     }
+```
 
 ### 验证一个频道是否仍然存在
 
@@ -79,7 +83,7 @@
 
     /Channel/ValidateChannel?Id={Your ID}&Key={Connect Key}
 
-方法：  
+方法：
 
     HTTP GET
 
@@ -88,6 +92,8 @@
     本接口能够检查一个频道是否存在，以及是否能够使用特定Key连接。本接口不需要AccessToken。
 
 返回值示例：
+
+```json
 
     // 频道存在且连接Key正确
     {
@@ -106,6 +112,7 @@
         "code": -4,
         "message": "Can not find your channel!"
     }
+```
 
 ### 在特定频道推送一条消息
 
@@ -113,7 +120,7 @@
 
     /Message/PushMessage
 
-方法：  
+方法：
 
     HTTP POST
 
@@ -131,10 +138,12 @@
 
 返回值示例：
 
+```json
     {
         "code": 0,
         "message": "You have successfully created a message at channel:2!"
     }
+```
 
 ### 收听一个频道
 
