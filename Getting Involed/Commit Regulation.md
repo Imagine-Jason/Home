@@ -1,27 +1,34 @@
-# Git Commit Regulation
+# Git Commit 规范
 
-## Basic Rules
+## 基础规则
 
-### Commit Related Messages
+### 仅仅Commit相关的修改
 
-A commit should be a wrapper for related changes. For example, fixing two different bugs should produce two separate commits. Small commits make it easier for other developers to understand the changes and roll them back if something went wrong.
-With tools like the staging area and the ability to stage only parts of a file, Git makes it easy to create very granular commits.
+commit应该是相关的更改的集合。 例如，修复两个不同的错误应该产生两个单独的commit。 小commit使其他开发人员更容易理解这些更改，并在出现问题时将其回滚。
+借助staging area之类的工具和仅分段文件的部分功能，Git可以轻松创建非常细化的commit。
 
-### Commit Often
+### 尽可能频繁Commit
 
-Committing often keeps your commits small and, again, helps you commit only related changes. Moreover, it allows you to share your code more frequently with others. That way it‘s easier for everyone to integrate changes regularly and avoid having merge conflicts. Having few large commits and sharing them rarely, in contrast, makes it hard to solve conflicts.
+Commit通常要保持较少的修改，这可以帮助开发者仅关注相关的修改。 此外，它允许更频繁地与其他人分享您的代码。 这样，每个人都可以更容易地定期整合更改，避免合并冲突。 相比之下，较大的提交并且很少分享，会导致发生冲突时很难解决。
 
-### Don't Commit Half-Done Work
+### 不要提交未完成的工作
 
-You should only commit code when
-it‘s completed. This doesn‘t mean you have to complete a whole, large feature before committing. Quite the contrary: split the feature‘s implementation into logical chunks and remember to commit early and often. But don‘t commit just to have something in the repository before leaving the office at the end of the day. If you‘re tempted to commit just because you need a clean working copy (to check out a branch, pull in changes, etc.) consider using Git‘s «Stash» feature instead.
+你不应该提交一次未完成的工作。 这并不意味着你必须在提交之前完成一个完整的大功能。 恰恰相反：将功能的实现分割成逻辑块，并记住提前和经常提交。 千万不要仅仅是在一天工作完成后的下班离开办公室时进行提交。 如果你只是因为需要一个干净的工作副本而试图提交（检查分支，引入更改等），请考虑使用Git的“stach”功能。
 
-### Test Your Code Before You Commit
+### 提交前检查代码
 
-Resist the temptation to commit something that you «think» is completed. Test it thoroughly to make sure it really is completed and has no side effects (as far as one can tell). While committing half-baked things in your local repository only requires you to forgive yourself, having your code tested is even more important when it comes to pushing/sharing your code with others.
+即使你非常想这么做，也不要提交一个你认为“完成”了的commit。 彻底测试以确保它确实完成并且没有副作用。 虽然在本地存储库中提交未通过检查的代码只需要你自己反省，但是在push给与他人共享代码时，commit前测试一次代码就显得非常重要。
 
-### Write Good Commit Messages
+### 认真编写Commit信息
 
+以您的更改摘要（最多50个字符作为指导）开始您的消息。 从中分离出来
+通过包括一个空白行，以下正文。 您的信息正文应该对以下问题提供详细的答案：
+- 改变的动机是什么？ - 它与以前有什么不同？
+实施？
+使用命令式，现在式（“更改”，而不是“更改”或“更改”）与git merge等命令生成的消息一致。
+将文件备份到远程服务器上对于使用版本控制系统是一个很好的副作用。 但是您不应该像使用备份系统一样使用您的VCS。 在进行版本控制时，您应该注意语义上的提交（请参阅«相关更改»） - 您不应该只是在文件中填充。
+
+信息开始应当是你的修改的简要介绍，且不应超过50字。使用一个空行
 Begin your message with a short summary of your changes (up to 50 characters as a guideline). Separate it from
 the following body by including a blank line. The body of your message should provide detailed answers to the following questions:
 – What was the motivation for the change? – How does it differ from the previous
