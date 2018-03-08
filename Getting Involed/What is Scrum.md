@@ -58,6 +58,7 @@ Scrum定义了一种名为Daily Scrum的活动，通常称为每日站立会议�
 ### Sprint回访
 
 开发团队向利益相关者展示了他们在Sprint期间所取得的成就 他们会演示软件并展示其价值。
+
 ![Sprint Review](https://www.visualstudio.com/wp-content/uploads/2016/08/AgileCrews1.png)
 
 ### Sprint回顾
