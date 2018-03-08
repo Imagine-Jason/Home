@@ -21,54 +21,37 @@ Commit通常要保持较少的修改，这可以帮助开发者仅关注相关�
 
 ### 认真编写Commit信息
 
-以您的更改摘要（最多50个字符作为指导）开始您的消息。 从中分离出来
-通过包括一个空白行，以下正文。 您的信息正文应该对以下问题提供详细的答案：
-- 改变的动机是什么？ - 它与以前有什么不同？
-实施？
-使用命令式，现在式（“更改”，而不是“更改”或“更改”）与git merge等命令生成的消息一致。
-将文件备份到远程服务器上对于使用版本控制系统是一个很好的副作用。 但是您不应该像使用备份系统一样使用您的VCS。 在进行版本控制时，您应该注意语义上的提交（请参阅«相关更改»） - 您不应该只是在文件中填充。
+Commit信息的开始应当是你的修改的简要介绍，且不应超过50字。使用一个空行来分隔Commit的正文。在正文中，给出下列问题的答案：
 
-信息开始应当是你的修改的简要介绍，且不应超过50字。使用一个空行
-Begin your message with a short summary of your changes (up to 50 characters as a guideline). Separate it from
-the following body by including a blank line. The body of your message should provide detailed answers to the following questions:
-– What was the motivation for the change? – How does it differ from the previous
-implementation?
-Use the imperative, present tense («change», not «changed» or «changes») to be consistent with generated messages from commands like git merge.
-Having your files backed up on a remote server is a nice side effect of having a version control system. But you should not use your VCS like it was a backup system. When doing version control, you should pay attention to committing semantically (see «related changes») - you shouldn‘t just cram in files.
+* Commit的动机是什么
+* Commit与之前有何不同
 
-### Use Branches
+使用一般现在时编写这些信息，不要用“修改了”，“正在修改”等词，以便与git merge等命令生成的消息保持一致。
 
-Branching is one of Git‘s most powerful features - and this is not by accident: quick and easy branching was a central requirement from day one. Branches are the perfect tool to help you avoid mixing up different lines of development. You should use branches extensively in your development workflows: for new features, bug fixes, ideas...
+虽然使用一个git远程服务器可以让你的文件安全的同步，但是千万不要把版本控制的远程服务器当作是备份平台或者是网盘。在进行版本控制时，时刻警醒你的修改是要和别人共享的，它们不仅仅体现在文件本身。
 
-### Agree on A Workflow
+### 随时开启新分支
 
-Git lets you pick from a lot of different workflows: long-running branches, topic branches, merge or rebase, git-flow... Which one you choose depends on a couple of factors: your project, your overall development and deployment workflows and (maybe most importantly) on your and your teammates‘ personal preferences. However you choose to work, just make sure to agree on a common workflow that everyone follows.
+分支是Git最强大的功能之一。优秀的仓库往往在开始工作时就有简明高效的分支结构。分支结构是帮助避免混淆不同开发线的完美工具。您应该在您的开发工作流程中广泛使用分支结构，针对：新功能，错误修复，想法...
 
-The following document is based on experience doing code development, bug troubleshooting and code review across a number of projects using GIT, including libvirt, QEMU and OpenStack Nova. Examination of other open source projects such as the Kernel, CoreUtils, GNULIB and more suggested they all follow a fairly common practice. It is motivated by a desire to improve the quality of the Nova GIT history. Quality is a hard term to define in computing; one man's "Thing of Beauty" is another man's "Evil Hack". We can, however, come up with some general guidelines for what to do, or conversely what not to do, when publishing GIT commits for merge with a project, in this case, OpenStack.
+## 格式化规则
 
-This topic can be split into two areas of concern
+- 首字母大写，简短__（不超过50字）__总结
 
-* The structured set/split of the code changes
-* The information provided in the commit message
+- __总是将第二行留空__
 
-## Formatting Rules
+- 在命令中写下你的commit信息：“修正错误”，而不是“正在修正错误”或“修正了错误”。 这个约定与由git merge和git revert等命令生成的提交消息相匹配。
 
-- Capitalized, short __(50 chars or less)__ summary
+- __空行__
 
-- More detailed explanatory text, if necessary.  __Wrap it to about 72 characters__.  In some contexts, the first line is treated as the subject of an email and the rest of the text as the body.  The blank line separating the summary from the body is critical (unless you omit the body entirely); tools like rebase can get confused if you run the two together.
+- 如果仍然有更多的段落，则出现在空行之后。
+     - 可以使用子弹点，每个子弹点之间都有空行
+     - 对于子弹点通常使用连字符或星号，前面是一个Tab或4个空格
+     - 使用悬挂式缩进而不是首行缩进
 
-- __Always leave the second line blank.__
+### 优秀的提交信息示例
 
-- Write your commit message in the imperative: "Fix bug" and not "Fixed bug" or "Fixes bug."  This convention matches up with commit messages generated by commands like git merge and git revert.
-
-- Further paragraphs come after blank lines.
-    - Bullet points are okay, too
-    - Typically a hyphen or asterisk is used for the bullet, preceded by a single space, with blank lines in between, but conventions vary here
-    - Use a hanging indent
-
-### Examples of good practice
-
-__Example 1__ (no description, only summary)
+__例1__ (没有描述，只有概要)
 
 ```
   commit 3114a97ba188895daff4a3d337b2c73855d4632d
@@ -78,7 +61,7 @@ __Example 1__ (no description, only summary)
     Update default policies for KVM guest PIT & RTC timers
 ```
 
-__Example 2__ (description as bullet points)
+__例2__ (使用子弹点表达描述)
 ```
   commit ae878fc8b9761d099a4145617e4a48cbeb390623
   Author: [removed]
@@ -93,7 +76,7 @@ __Example 2__ (description as bullet points)
      - Allow for destruction of an instance while leaving the domain
 ```
 
-__Example 3__ (description as plain text)
+__例3__ (使用大段文本表达描述)
 
 ```
   commit 31336b35b4604f70150d0073d77dbf63b9bf7598
