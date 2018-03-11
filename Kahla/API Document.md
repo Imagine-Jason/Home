@@ -25,9 +25,44 @@ API地址分别是：
 
 ## API目录
 
+* [检查更新](#检查更新)
 * [密码认证](#密码认证)
 * [注册账号](#注册账号)
 * [查询登录状态](#查询登录状态)
+
+### 检查更新
+
+请求地址：
+
+    /Version
+
+方法
+
+    HTTP GET
+
+接口说明：
+
+    本接口提供了Kahla的客户端版本检查更新功能。
+
+    服务器支持的最新版本为`latestVersion`，其中第一个单位为主发布号，第二个单位为版本号，第三个单位为更新号。
+
+    服务器支持的最老版本为`oldestSupportedVersion`，其中第一个单位为主发布号，第二个单位为版本号，第三个单位为更新号。
+
+    当客户端软件不是最新时，应立即询问用户是否下载新版本。若用户同意，则将用户重定向到`downloadAddress`。
+
+    当客户端软件已经低于最低的支持版本时，强制将用户重定向到`downloadAddress`。
+
+返回值示例：
+
+```json
+{
+    "latestVersion": "0.7.0",
+    "oldestSupportedVersion": "0.7.0",
+    "downloadAddress": "https://kahla.aiursoft.com",
+    "code": 0,
+    "message": null
+}
+```
 
 ### 密码认证
 
