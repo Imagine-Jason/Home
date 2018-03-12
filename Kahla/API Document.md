@@ -29,6 +29,8 @@ API地址分别是：
 * [密码认证](#密码认证)
 * [注册账号](#注册账号)
 * [查询登录状态](#查询登录状态)
+* [查询个人资料](#查询个人资料)
+* [查看我的好友列表](#查看我的好友列表)
 
 ### 检查更新
 
@@ -70,7 +72,7 @@ API地址分别是：
 
     /AuthByPassword
 
-方法
+方法：
 
     HTTP POST
 
@@ -123,7 +125,7 @@ API地址分别是：
 
     /RegisterKahla
 
-方法
+方法：
 
     HTTP POST
 
@@ -167,7 +169,7 @@ API地址分别是：
 
     /SigninStatus
 
-方法
+方法：
 
     HTTP GET
 
@@ -182,5 +184,174 @@ API地址分别是：
     "value": true,
     "code": 0,
     "message": "Successfully get your signin status."
+}
+```
+
+### 查询个人资料
+
+请求地址：
+
+    /Me
+
+方法：
+
+    HTTP GET
+
+接口说明：
+
+    本接口能够查询当前用户的个人资料。
+
+返回值示例：
+
+```json
+{
+    "value": {
+        "id": "a75dff34-35d0-451d-bae3-af3c206bbc6b",
+        "email": "anduin@aiursoft.com",
+        "emailConfirmed": false,
+        "bio": null,
+        "nickName": "Anduin Xue",
+        "sex": null,
+        "headImgUrl": "https://oss.aiursoft.com/UsersIcon/9XNNIJF9RB.jpg",
+        "preferedLanguage": "en",
+        "accountCreateTime": "2018-02-09T15:09:23.1468265"
+    },
+    "code": 0,
+    "message": "Successfully get your information."
+}
+```
+
+错误返回值示例:
+
+```json
+{
+    "code": -8,
+    "message": "Unauthorized!"
+}
+```
+
+### 查看我的好友列表
+
+请求地址：
+
+    /MyFriends?orderByName={true | false}
+
+方法：
+
+    HTTP GET
+
+参数列表：
+
+|参数名称|参数类型|参数含义|
+|--|--|--|
+|orderByName|boolean|若为false，则按照最后一条消息的时间逆序排序。若为true，则按照姓名排序|
+
+返回值示例:
+
+```json
+{
+    "items": [
+        {
+            "displayName": "1461767262",
+            "displayImage": "https://developer.aiursoft.com/images/appdefaulticon.png",
+            "latestMessage": "[img]https://oss.aiursoft.com/UserFile/R7ZXD084K0.jpg",
+            "latestMessageTime": "2018-02-23T16:29:37.6693943",
+            "unReadAmount": 0,
+            "conversationId": 3,
+            "discriminator": "PrivateConversation",
+            "userId": "f61adb9f-b2db-4ad4-92a5-1a7243d6df23"
+        },
+        {
+            "displayName": "2224877382",
+            "displayImage": "https://developer.aiursoft.com/images/appdefaulticon.png",
+            "latestMessage": "你好\n",
+            "latestMessageTime": "2018-03-11T11:37:04.998852",
+            "unReadAmount": 0,
+            "conversationId": 14,
+            "discriminator": "PrivateConversation",
+            "userId": "03f1e915-359b-4d69-8bc9-253bfef4690f"
+        },
+        {
+            "displayName": "2539820590",
+            "displayImage": "https://developer.aiursoft.com/images/appdefaulticon.png",
+            "latestMessage": "Hello\n",
+            "latestMessageTime": "2018-03-11T19:51:42.804566",
+            "unReadAmount": 0,
+            "conversationId": 7,
+            "discriminator": "PrivateConversation",
+            "userId": "bcf156f0-d4be-436c-8e4b-d1faa72754e9"
+        }
+    ],
+    "code": 0,
+    "message": "Successfully get all your friends."
+}
+```
+
+错误返回值示例：
+
+```json
+{
+    "items": [
+        "The value 'unknown' is not valid."
+    ],
+    "code": -10,
+    "message": "Your input contains several errors!"
+}
+```
+
+### 删除一位好友
+
+请求地址：
+
+    /DeleteFriend
+
+方法：
+
+    HTTP POST
+
+表单：
+
+    Id={Target User Id}
+
+表单编码：
+
+    x-www-form-urlencoded
+
+接口说明：
+
+    本接口能够删除一位好友。
+
+返回值示例：
+
+```json
+{
+    "code": 0,
+    "message": "Successfully deleted your friend relationship."
+}
+```
+
+错误返回值示例：
+
+```json
+//未授权
+{
+    "code": -8,
+    "message": "Unauthorized!"
+}
+```
+
+```json
+//目标用户不存在
+{
+    "code": -4,
+    "message": "We can not find target user."
+}
+```
+
+```json
+//目标用户存在，但你们根本不是好友
+{
+    "code": -7,
+    "message": "He is not your friend at all."
 }
 ```
