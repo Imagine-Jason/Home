@@ -21,7 +21,7 @@ API地址分别是：
 
     Authorization:Bearer {Credential}
 
-其中，`Credential`值为你在登录时获取到的凭据。
+其中，`Credential`值为当前用户在登录时获取到的凭据。
 
 ## API目录
 
@@ -31,6 +31,8 @@ API地址分别是：
 * [查询登录状态](#查询登录状态)
 * [查询个人资料](#查询个人资料)
 * [查看我的好友列表](#查看我的好友列表)
+* [删除一位好友](#删除一位好友)
+* [完成好友请求](#完成好友请求)
 
 ### 检查更新
 
@@ -353,5 +355,164 @@ API地址分别是：
 {
     "code": -7,
     "message": "He is not your friend at all."
+}
+```
+
+### 创建好友请求
+
+请求地址：
+
+    /CreateRequest
+
+方法：
+
+    HTTP POST
+
+表单：
+
+    Id={Target User Id}
+
+表单编码：
+
+    x-www-form-urlencoded
+
+接口说明：
+
+    本接口能够向目标用户发起好友申请。
+
+    在目标用户处理前，一位用户只能发送一次好友申请。
+
+返回值示例：
+
+```json
+{
+    "code": 0,
+    "message": "Successfully created your request!"
+}
+```
+
+错误返回值示例：
+
+```json
+//未授权
+{
+    "code": -8,
+    "message": "Unauthorized!"
+}
+```
+
+```json
+//目标用户不存在
+{
+    "code": -4,
+    "message": "We can not find your target user!"
+}
+```
+
+```json
+//目标用户就是当前用户
+{
+    "code": -3,
+    "message": "You can't request yourself!"
+}
+```
+
+```json
+//存在未处理的请求
+{
+    "code": -6,
+    "message": "There are some pending request hasn't been completed!"
+}
+```
+
+```json
+//你们已经是好友了
+{
+    "code": -6,
+    "message": "You two are already friends!"
+}
+```
+
+### 完成好友请求
+
+请求地址：
+
+    /CompleteRequest
+
+方法：
+
+    HTTP POST
+
+表单：
+
+    Id={Request Id}&Accept={true|false}
+
+表单编码：
+
+    x-www-form-urlencoded
+
+参数说明：
+
+|参数名称|参数类型|参数含义|
+|--|--|--|
+|Id|int|要完成的请求的Id，注意不是用户Id|
+|Accept|boolean|是否同意。如果需要接受好友请求，应设为true。否则应为false|
+
+接口说明：
+
+    本接口能够完成一个目标用户为当前用户的好友请求。
+
+    若接受了好友请求，那么将会把双方互相加入到对方的好友列表中。
+
+    若拒绝了好友请求，不会有其它操作。
+
+返回值示例：
+
+```json
+{
+    "code": 0,
+    "message": "You have successfully completed this request."
+}
+```
+
+错误返回值示例：
+
+```json
+//未授权
+{
+    "code": -8,
+    "message": "Unauthorized!"
+}
+```
+
+```json
+//找不到目标请求
+{
+    "code": -4,
+    "message": "We can not find target request."
+}
+```
+
+```json
+//请求并不是在向当前用户请求
+{
+    "code": -8,
+    "message": "The target user of this request is not you."
+}
+```
+
+```json
+//你在试图操作一个已经完成的请求
+{
+    "code": -6,
+    "message": "The target request is already completed."
+}
+```
+
+```json
+//请求成功接受了，但这之前你们就已经是好友了
+{
+    "code": -3,
+    "message": "You two are already friends."
 }
 ```
