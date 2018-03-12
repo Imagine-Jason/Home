@@ -25,10 +25,10 @@
 
 Aiursoft平台是一个由众多组件构成的微服务平台，它的不同服务都包含了不同特性。这包括了应用权限认证和授权系统、用户统一身份认证、对象存储系统、消息队列、文档中心、账户管理中心等。
 
-* [应用认证系统](#)
+* [应用认证系统](../Authentication/OAuth.md)
 * [用户认证系统](../Authentication/OAuth.md)
 * [对象存储系统](../Object%20Storage/What%20is%20OSS.md)
-* [消息队列](#)
+* [消息队列](../Stargate/What%20is%20Stargate.md)
 
 ## 文档的语言
 
