@@ -2,7 +2,7 @@
 
 ![Agile](https://www.visualstudio.com/wp-content/uploads/2016/08/WhatIsAgile_600x300.png)
 
-Agile是一个术语，用于描述强调增量交付，团队协作，持续规划和持续学习的软件开发方法。 “Agile”一词是2001年在[Agile软件宣言](http://agilemanifesto.org/iso/zhchs/manifesto.html)中创造的。 该宣言着手制定原则以指导更好的软件开发方法。 宣言的核心是宣告4个代表Agile运动基础的价值观。 正如书面所述，宣言声明...
+Agile是一个术语，用于描述强调增量交付，团队协作，持续规划和持续学习的软件开发方法。 “Agile”一词是2001年在[敏捷软件宣言](http://agilemanifesto.org/iso/zhchs/manifesto.html)中创造的。 该宣言着手制定原则以指导更好的软件开发方法。 宣言的核心是宣告4个代表Agile运动基础的价值观。 正如书面所述，宣言声明...
 
 >* 个体和互动 高于 流程和工具
 >* 工作的软件 高于 详尽的文档
