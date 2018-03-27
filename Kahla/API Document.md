@@ -30,6 +30,7 @@ API地址分别是：
 * [注册账号](#注册账号)
 * [查询登录状态](#查询登录状态)
 * [查询个人资料](#查询个人资料)
+* [修改个人资料](#修改个人资料)
 * [查看我的好友列表](#查看我的好友列表)
 * [删除一位好友](#删除一位好友)
 * [完成好友请求](#完成好友请求)
@@ -229,6 +230,55 @@ API地址分别是：
 {
     "code": -8,
     "message": "Unauthorized!"
+}
+```
+
+### 修改个人资料
+
+请求地址：
+
+    /UpdateInfo
+
+方法：
+
+    HTTP POST
+
+表单：
+
+    NickName={Kahla Users NickName}&Bio={User Bio}
+
+参数说明：
+
+    NickName最大长度为20，必填；
+    Bio最大长度为80，选填。
+
+表单编码：
+
+    x-www-form-urlencoded
+
+接口说明：
+
+    本接口能够允许卡拉的用户修改他们的基本信息。
+
+返回值示例：
+
+```json
+{
+    "code": 0,
+    "message": "Successfully set your personal info."
+}
+```
+
+错误返回值示例：
+
+```json
+//参数不符合规范
+{
+    "items": [
+        "The Email field is not a valid e-mail address."
+    ],
+    "code": -10,
+    "message": "Your input contains several errors!"
 }
 ```
 
