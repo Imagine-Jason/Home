@@ -566,3 +566,173 @@ API地址分别是：
     "message": "You two are already friends."
 }
 ```
+
+
+### 创建群组
+
+请求地址：
+
+    /CreateGroupConversation
+
+方法：
+
+    HTTP POST
+
+表单：
+
+    GroupName={new group name}
+
+表单编码：
+
+    x-www-form-urlencoded
+
+参数说明：
+
+|参数名称|参数类型|参数含义|
+|--|--|--|
+|GroupName|string|新的群组名称。该名称是全局唯一的。长度在5到25字范围内。|
+
+接口说明：
+
+    本接口能够新建一个群组，并将当前用户加入到该群组中。
+
+    任意两个群组不允许具有相同名称。
+
+返回值示例：
+
+```json
+{
+    "code": 0,
+    "value" : 1234,
+    "message": "You have successfully created a new group and joined it!"
+}
+```
+
+错误返回值示例：
+
+```json
+//未授权
+{
+    "code": -8,
+    "message": "Unauthorized!"
+}
+```
+
+```json
+//已存在同名群组
+{
+    "code": -7,
+    "message": "A group with name: GroupName was already exists!"
+}
+```
+
+
+### 加入群组
+
+请求地址：
+
+    /JoinGroup
+
+方法：
+
+    HTTP POST
+
+表单：
+
+    GroupName={target group name}
+
+表单编码：
+
+    x-www-form-urlencoded
+
+参数说明：
+
+|参数名称|参数类型|参数含义|
+|--|--|--|
+|GroupName|string|群组名称。该名称是全局唯一的。长度在5到25字范围内。|
+
+接口说明：
+
+    本接口能够当前用户加入到该群组中。
+
+返回值示例：
+
+```json
+{
+    "code": 0,
+    "message": "You have successfully joint the group: groupName!"
+}
+```
+
+错误返回值示例：
+
+```json
+//已经加入
+{
+    "code": -6,
+    "message": "You have already joined the group: groupName!"
+}
+```
+
+```json
+//目标群组不存在
+{
+    "code": -4,
+    "message": "We can not find a group with name: groupName!"
+}
+```
+
+### 离开群组
+
+请求地址：
+
+    /LeaveGroup
+
+方法：
+
+    HTTP POST
+
+表单：
+
+    GroupName={target group name}
+
+表单编码：
+
+    x-www-form-urlencoded
+
+参数说明：
+
+|参数名称|参数类型|参数含义|
+|--|--|--|
+|GroupName|string|群组名称。该名称是全局唯一的。长度在5到25字范围内。|
+
+接口说明：
+
+    本接口能够使当前用户离开目标群组。如果当前用户是该群组的最后一位用户，该群组将自然被删除。
+
+返回值示例：
+
+```json
+{
+    "code": 0,
+    "message": "You have successfully leaved the group: groupName!"
+}
+```
+
+错误返回值示例：
+
+```json
+//当前用户并未加入
+{
+    "code": -6,
+    "message": "You did not joined the group: groupName at all!"
+}
+```
+
+```json
+//目标群组不存在
+{
+    "code": -4,
+    "message": "We can not find a group with name: groupName!"
+}
+```
