@@ -25,8 +25,10 @@ API地址分别是：
 
 ## API目录
 
+* [API根](#API根)
 * [检查更新](#检查更新)
 * [密码认证](#密码认证)
+* [上传文件](#上传文件)
 * [注册账号](#注册账号)
 * [查询登录状态](#查询登录状态)
 * [查询个人资料](#查询个人资料)
@@ -34,9 +36,38 @@ API地址分别是：
 * [查看我的好友列表](#查看我的好友列表)
 * [删除一位好友](#删除一位好友)
 * [完成好友请求](#完成好友请求)
+* [搜索群](#搜索群)
 * [创建群组](#创建群组)
 * [加入群组](#加入群组)
 * [离开群组](#离开群组)
+
+### API根
+
+请求地址:
+    /
+
+方法
+
+    HTTP GET
+
+接口说明
+
+    该API能够显示服务器时间和当前用户状态。用于在开发时方便调试使用。
+
+    另一方面，假若该API无法访问，证明卡拉的服务器遇到了严重故障。因此它可以被用作网络状态检测。
+
+返回值示例：
+
+```json
+{
+    "code": 0,
+    "message": "Welcome to Aiursoft Kahla API!",
+    "wikiPath": "https://wiki.aiursoft.com",
+    "serverTime": "2018-09-19T23:38:24.831322+08:00",
+    "utcTime": "2018-09-19T15:38:24.8318556Z",
+    "authenticated": false
+}
+```
 
 ### 检查更新
 
@@ -122,6 +153,44 @@ API地址分别是：
     ],
     "code": -10,
     "message": "Your input contains several errors!"
+}
+```
+
+### 上传文件
+
+请求地址
+
+    /UploadFile
+
+方法
+
+    HTTTP Post
+
+表单
+
+    表单中不需要包含任何内容，但必须包含一个文件。
+
+    文件大小不得小于1b，不得超过1000MB。
+
+表单编码
+
+    multipart/form-data
+
+接口说明
+
+    本接口允许用户上次一个本地的自定义文件，将其存储在卡拉所使用的对象存储服务中，再将该文件的公网URL返回。
+
+    本接口可以应用在图片发送和文件发送功能上。
+
+>注意: 文件**仅能保留7天**。
+
+返回值示例
+
+```json
+{
+    "value": "https://oss.aiursoft.com/Userfiles/e27bb7e01c534f8796118e16af34ea99.png",
+    "code": 0,
+    "message": "Successfully uploaded your file!"
 }
 ```
 
@@ -248,12 +317,13 @@ API地址分别是：
 
 表单：
 
-    NickName={Kahla Users NickName}&Bio={User Bio}
+    NickName={Kahla Users NickName}&Bio={User Bio}&HeadImgUrl={Head Image Url}
 
 参数说明：
 
     NickName最大长度为20，必填；
-    Bio最大长度为80，选填。
+    Bio最大长度为80，必填，但是允许为空值。
+    HeadImgUrl必须为URL格式，选填。
 
 表单编码：
 
@@ -262,6 +332,10 @@ API地址分别是：
 接口说明：
 
     本接口能够允许卡拉的用户修改他们的基本信息。
+
+    无论如何，调用本API都会更新用户的昵称。
+    无论如何，调用本API都会更新用户的Bio，但是Bio允许为空。
+    如果调用时填写了HeadImgUrl，就会更新头像地址。否则不会更新。
 
 返回值示例：
 
@@ -570,6 +644,47 @@ API地址分别是：
 }
 ```
 
+### 搜索群
+
+请求地址
+
+    /SearchGroup
+
+请求方法
+
+    HTTP GET
+
+参数说明
+
+|参数名称|参数类型|参数含义|
+|--|--|--|
+|GroupName|string|要搜索的群名称，至少3字符。|
+
+接口说明
+
+    该接口允许调用者按照群名称搜索一个群。
+
+返回值示例
+
+```json
+{
+    "items": [
+        {
+            "users": null,
+            "groupImage": "https://cdn.aiursoft.com/images/appdefaulticon.png",
+            "groupName": "eee",
+            "id": 1,
+            "discriminator": "GroupConversation",
+            "aesKey": "b80eda4f25ae4d1b88abb710c2bc28a4",
+            "conversationCreateTime": "2018-09-19T16:30:13.9892511",
+            "displayName": null,
+            "displayImage": null
+        }
+    ],
+    "code": 0,
+    "message": "Search result is shown."
+}
+```
 
 ### 创建群组
 
@@ -628,7 +743,6 @@ API地址分别是：
     "message": "A group with name: GroupName was already exists!"
 }
 ```
-
 
 ### 加入群组
 
