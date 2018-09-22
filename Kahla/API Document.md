@@ -36,7 +36,9 @@ API地址分别是：
 * [查看我的好友列表](#查看我的好友列表)
 * [删除一位好友](#删除一位好友)
 * [完成好友请求](#完成好友请求)
+* [查看向我发送的所有好友请求](#查看向我发送的所有好友请求)
 * [搜索群](#搜索群)
+* [获取一个会话下的所有消息](#获取一个会话下的所有消息)
 * [创建群组](#创建群组)
 * [加入群组](#加入群组)
 * [离开群组](#离开群组)
@@ -644,6 +646,120 @@ API地址分别是：
 }
 ```
 
+### 查看向我发送的所有好友请求
+
+请求地址
+
+    /MyRequests
+
+请求方法
+
+    HTTP GET
+
+接口说明
+
+    该接口将返回所有向当前用户发送的好友请求。
+
+返回值示例
+
+```json
+{
+    "items": [
+        {
+            "id": 27,
+            "creatorId": "fe4a3b24-6dfe-4ded-9ad0-e9c4cdf8971f",
+            "creator": {
+                "id": "fe4a3b24-6dfe-4ded-9ad0-e9c4cdf8971f",
+                "bio": null,
+                "nickName": "f",
+                "sex": null,
+                "headImgUrl": "https://cdn.aiursoft.com/images/userdefaulticon.png",
+                "preferedLanguage": "en",
+                "accountCreateTime": "2018-09-17T02:26:55.0295973Z",
+                "emailConfirmed": false,
+                "email": "f@f.com"
+            },
+            "targetId": "6da0802e-18e4-4a76-99a5-47878dd7b8a5",
+            "createTime": "2018-09-18T07:13:33.0303038Z",
+            "completed": true
+        },
+        {
+            "id": 23,
+            "creatorId": "e96bedf3-c4d6-4fbe-bc1d-ee8ba05b9892",
+            "creator": {
+                "id": "e96bedf3-c4d6-4fbe-bc1d-ee8ba05b9892",
+                "bio": null,
+                "nickName": "1638255601",
+                "sex": null,
+                "headImgUrl": "https://cdn.aiursoft.com/images/userdefaulticon.png",
+                "preferedLanguage": "en",
+                "accountCreateTime": "2018-09-17T02:20:53.9664403Z",
+                "emailConfirmed": false,
+                "email": "1638255601@qq.com"
+            },
+            "targetId": "6da0802e-18e4-4a76-99a5-47878dd7b8a5",
+            "createTime": "2018-09-17T02:22:13.007078Z",
+            "completed": true
+        }
+    ],
+    "code": 0,
+    "message": "Successfully get your requests list."
+}
+```
+
+### 搜索好友
+
+请求地址
+
+    /SearchFriends
+
+请求方法
+
+    HTTP GET
+
+参数说明
+
+|参数名称|参数类型|参数含义|
+|--|--|--|
+|NickName|string|要搜索的用户NickName，至少3字符。|
+
+接口说明
+
+    该接口允许用户搜索所有用户中NickName包含传入值的结果。
+
+返回值示例
+
+```json
+{
+    "items": [
+        {
+            "id": "2f1093e7-2375-4824-ab3f-c0116d8b15b9",
+            "bio": "Yeah, chairman for life!",
+            "nickName": "test",
+            "sex": null,
+            "headImgUrl": "https://oss.aiursoft.com/Userfiles/3eb842ac777c44e48532cd744dad4a4e.jpg",
+            "preferedLanguage": "en",
+            "accountCreateTime": "2018-08-22T15:08:45.6682833Z",
+            "emailConfirmed": false,
+            "email": "test@test.test"
+        },
+        {
+            "id": "736a7281-8cf3-4916-b78d-9dc974450342",
+            "bio": null,
+            "nickName": "test",
+            "sex": null,
+            "headImgUrl": "https://cdn.aiursoft.com/images/userdefaulticon.png",
+            "preferedLanguage": "en",
+            "accountCreateTime": "2018-09-17T02:27:01.4267586Z",
+            "emailConfirmed": false,
+            "email": "test@qq.com"
+        }
+    ],
+    "code": 0,
+    "message": "Search result is shown."
+}
+```
+
 ### 搜索群
 
 请求地址
@@ -684,6 +800,124 @@ API地址分别是：
     "code": 0,
     "message": "Search result is shown."
 }
+```
+
+### 获取一个会话下的所有消息
+
+请求地址
+
+    /GetMessage
+
+方法
+
+    HTTP GET
+
+参数列表
+
+|参数名称|参数类型|参数含义|
+|--|--|--|
+|id|number|目标会话的ID|
+|take|number|返回值获取的最大消息数量|
+
+接口说明
+
+    该接口能够返回一个特定会话下的所有消息，无论是已读消息还是未读消息。
+
+    当未传递take参数时，会仅显示最新的15条消息，按发送时间排序。如果指定了take，会显示最新的`take`条消息，按发送时间排序。
+
+    注意：该接口会将所有消息设为已读！
+
+返回值示例
+
+```json
+{
+    "items": [
+        {
+            "id": 584,
+            "conversationId": 30,
+            "senderId": "2f1093e7-2375-4824-ab3f-c0116d8b15b9",
+            "sender": {
+                "id": "2f1093e7-2375-4824-ab3f-c0116d8b15b9",
+                "bio": "Yeah, chairman for life!",
+                "nickName": "test",
+                "sex": null,
+                "headImgUrl": "https://oss.aiursoft.com/Userfiles/3eb842ac777c44e48532cd744dad4a4e.jpg",
+                "preferedLanguage": "en",
+                "accountCreateTime": "2018-08-22T15:08:45.6682833Z",
+                "emailConfirmed": false,
+                "email": "test@test.test"
+            },
+            "sendTime": "2018-09-20T02:15:46.6706281Z",
+            "content": "U2FsdGVkX185RThnO1g63f8wBBPtQ8qCrboRiHB2jeVjoSxra+Nwr5TBGGl2cumSwczXj2490fpQIzhuhHi4Oy3gq9Tsk9YiuCXXtzPmlPM=",
+            "read": true
+        },
+        {
+            "id": 593,
+            "conversationId": 30,
+            "senderId": "6da0802e-18e4-4a76-99a5-47878dd7b8a5",
+            "sender": {
+                "id": "6da0802e-18e4-4a76-99a5-47878dd7b8a5",
+                "bio": "let today = new beginning();",
+                "nickName": "Anduin Xue",
+                "sex": null,
+                "headImgUrl": "https://oss.aiursoft.com/UserIcon/2ccdfcbd814d4a9781cbc3b3f047f6ef.png",
+                "preferedLanguage": "en",
+                "accountCreateTime": "2018-07-03T23:29:38.9450153Z",
+                "emailConfirmed": false,
+                "email": "anduin@aiursoft.com"
+            },
+            "sendTime": "2018-09-21T04:23:14.2177076Z",
+            "content": "U2FsdGVkX1+XMLYLTehAWnZmVEZX2MTR1K7B6CdHDas=",
+            "read": true
+        }
+    ],
+    "code": 0,
+    "message": "Successfully get all your messages."
+}
+```
+
+错误返回值示例
+
+```json
+{
+    "code": -8,
+    "message": "You don't have any relationship with that conversation."
+}
+```
+
+### 发送消息
+
+请求地址
+
+    /SendMessage
+
+方法
+
+    HTTP POST
+
+表单
+
+    Id={Conversation Id}&Content={Message Content}
+
+表单编码
+
+    x-www-form-urlencoded
+
+参数说明
+
+|参数名称|参数类型|参数含义|
+|--|--|--|
+|Id|number|会话的ID|
+|Content|string|要发送的消息的内容|
+
+接口说明
+
+    本接口向目标会话发送一条消息。
+
+返回值示例
+
+```json
+{"code":0,"message":"Your message has been sent."}
 ```
 
 ### 创建群组
@@ -746,33 +980,33 @@ API地址分别是：
 
 ### 加入群组
 
-请求地址：
+请求地址
 
     /JoinGroup
 
-方法：
+方法
 
     HTTP POST
 
-表单：
+表单
 
     GroupName={target group name}
 
-表单编码：
+表单编码
 
     x-www-form-urlencoded
 
-参数说明：
+参数说明
 
 |参数名称|参数类型|参数含义|
 |--|--|--|
 |GroupName|string|群组名称。该名称是全局唯一的。长度在5到25字范围内。|
 
-接口说明：
+接口说明
 
     本接口能够当前用户加入到该群组中。
 
-返回值示例：
+返回值示例
 
 ```json
 {
