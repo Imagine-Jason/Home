@@ -2,18 +2,18 @@
 
 ## 服务器地址
 
-卡拉具有两个版本的API，且两个版本的API同时都在运行。一般来说，两个版本的API返回值是完全相同的。但是一个API仅仅用于调试，另一个则用于生产部署。
+卡拉的服务器共有三台。
 
-其中，用于调试的API地址仅允许`http://localhost:8001`的跨域JS访问。用于生产的API仅允许`https://kahla.app.aiursoft.com`的跨域JS访问。
+| 服务器地址                                | 允许跨域                               | 是否限制Cookie | 分支   | 用途                               | 对应卡拉客户端分支 |
+|-------------------------------------------|----------------------------------------|----------------|--------|------------------------------------|--------------------|
+| https://kahla.server.aiursoft.com         | https://kahla.app.aiursoft.com         | 是             | master | 承载生产版本卡拉客户端的数据通讯   | master             |
+| https://staging.kahla.server.aiursoft.com | https://staging.kahla.app.aiursoft.com | 是             | dev    | 承载预部署版本卡拉客户端的数据通讯 | dev                |
+| https://dev.kahla.server.aiursoft.com     | http://localhost:8001                  | 否             | dev    | 用于开发者本机调试                 | 开发者本地         |
 
-如果你是卡拉的客户端贡献者，请注意在调试环境使用调试API，生产环境使用生产API。
 
-API地址分别是：
+如果你是卡拉的客户端贡献者，请注意在调试环境使用调试API，在预部署环境使用域部署API，在生产环境使用生产API。
 
-* 调试API：    <https://kahla.server.aiursoft.com/debugapi>
-* 生产API：    <https://kahla.server.aiursoft.com/api>
-
-文档之后的请求地址，均表示在上面的API地址后增加的内容。
+文档之后的请求地址，均表示在上面的API地址后增加`/api`的内容。
 
 ## 身份认证
 
