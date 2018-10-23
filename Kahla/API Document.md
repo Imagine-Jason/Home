@@ -402,10 +402,18 @@
 //参数不符合规范
 {
     "items": [
-        "The Email field is not a valid e-mail address."
+        "The field NewPassword must be a string or array type with a minimum length of '6'."
     ],
     "code": -10,
     "message": "Your input contains several errors!"
+}
+```
+
+```json
+//旧密码错误
+{
+    "code": -1,
+    "message": "Incorrect password."
 }
 ```
 
