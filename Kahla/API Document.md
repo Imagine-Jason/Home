@@ -29,6 +29,7 @@
 * [查询登录状态](#查询登录状态)
 * [查询个人资料](#查询个人资料)
 * [修改个人资料](#修改个人资料)
+* [修改密码](#修改密码)
 * [查看我的好友列表](#查看我的好友列表)
 * [删除一位好友](#删除一位好友)
 * [完成好友请求](#完成好友请求)
@@ -342,6 +343,56 @@
 {
     "code": 0,
     "message": "Successfully set your personal info."
+}
+```
+
+错误返回值示例：
+
+```json
+//参数不符合规范
+{
+    "items": [
+        "The Email field is not a valid e-mail address."
+    ],
+    "code": -10,
+    "message": "Your input contains several errors!"
+}
+```
+
+### 修改密码
+
+请求地址：
+
+    /ChangePassword
+
+方法：
+
+    HTTP POST
+
+表单：
+
+    OldPassword={Old Password}&NewPassword={New Password}&RepeatPassword={Repeat Password}
+
+参数说明：
+
+    OldPassword为旧密码，必填，6到32位
+    NewPassword为用户输入的新密码，必填，6到32位
+    RepeatPassword为用户输入的新密码，必填，6到32位
+
+表单编码：
+
+    x-www-form-urlencoded
+
+接口说明：
+
+    本接口能够允许卡拉的用户修改密码。
+
+返回值示例：
+
+```json
+{
+    "code": 0,
+    "message": "Successfully changed your password!"
 }
 ```
 
