@@ -22,11 +22,11 @@
 
 如果你计划使用、开发、部署、贡献卡拉，请访问下列链接：
 
-* [立即打开卡拉](https://kahla.app.aiursoft.com)
-* [立即打开卡拉服务器](https://kahla.server.aiursoft.com)
-* [打开卡拉的主页](https://kahla.aiursoft.com)
-* [从源码运行卡拉](https://github.com/AiursoftWeb/Kahla.App)
-* [从源码运行卡拉的服务器](https://github.com/AiursoftWeb/Kahla.Server)
+* [立即打开卡拉Web版](https://kahla.app.aiursoft.com)
+* [立即打开卡拉生产服务器](https://kahla.server.aiursoft.com)
+* [打开卡拉的官方网站](https://kahla.aiursoft.com)
+* [从源码运行卡拉](https://aiursoft.visualstudio.com/Kahla/_git/Kahla.App)
+* [从源码运行卡拉的服务器](https://aiursoft.visualstudio.com/_git/Kahla)
 * [访问卡拉的API文档](./API%20Document.md)
 
 ## 为卡拉进行贡献

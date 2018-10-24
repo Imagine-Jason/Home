@@ -777,7 +777,8 @@
 
 |参数名称|参数类型|参数含义|
 |--|--|--|
-|NickName|string|要搜索的用户NickName，至少3字符。|
+|NickName|string|要搜索的用户NickName，至少1字符。|
+|Take|number|搜索结果最大范围。用于客户端分页|
 
 接口说明
 
@@ -791,7 +792,7 @@
         {
             "id": "2f1093e7-2375-4824-ab3f-c0116d8b15b9",
             "bio": "Yeah, chairman for life!",
-            "nickName": "test",
+            "nickName": "test1",
             "sex": null,
             "headImgUrl": "https://oss.aiursoft.com/Userfiles/3eb842ac777c44e48532cd744dad4a4e.jpg",
             "preferedLanguage": "en",
@@ -802,7 +803,7 @@
         {
             "id": "736a7281-8cf3-4916-b78d-9dc974450342",
             "bio": null,
-            "nickName": "test",
+            "nickName": "test2",
             "sex": null,
             "headImgUrl": "https://cdn.aiursoft.com/images/userdefaulticon.png",
             "preferedLanguage": "en",
