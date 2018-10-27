@@ -231,11 +231,11 @@
 
     为了保证文件安全，也就是未授权的用户不得根据URL直接下载会话中的文件，卡拉将所有对象作为私有存储。当需要下载私有存储中的资源时，必须先生成一次性下载URL。
 
-    注意：每个文件在上传时都已经记录了其上传到的目标conversation ID。其会话必须要求当前用户已经加入才能调用此API。假若用户加入了某个群，取得了群内的文件ID，那么当用户离开该群后，他将不再可以通过此API下载文件。
+>注意：每个文件在上传时都已经记录了其上传到的目标conversation ID。其会话必须要求当前用户已经加入才能调用此API。假若用户加入了某个群，取得了群内的文件ID，那么当用户离开该群后，他将不再可以通过此API下载文件。
 
-    注意：向会话中上传的文件过期时间为20天。超过20天的文件将会被自动删除。调用此API可能会返回严重错误。
+>注意：向会话中上传的文件过期时间为20天。超过20天的文件将会被自动删除。调用此API可能会返回严重错误。
 
-    注意：本API返回的下载地址仅能请求一次，其就将会被作废！务必在用户每次尝试下载时都调用此API生成一次性下载链接！
+>注意：本API返回的下载地址仅能请求一次，其就将会被作废！务必在用户每次尝试下载时都调用此API生成一次性下载链接！
 
 返回值示例
 
@@ -244,7 +244,7 @@
     "code": 0,
     "message": "Successfully generated your file download address!",
     "fileName": "myfile.png",
-    "DownloadPath": "https://oss.aiursoft.com/Download/FromSecret?Sec=asdfasdf"
+    "downloadPath": "https://oss.aiursoft.com/Download/FromSecret?Sec=asdfasdf"
 }
 ```
 
