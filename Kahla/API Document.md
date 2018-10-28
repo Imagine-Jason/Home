@@ -161,7 +161,7 @@
 
 请求地址
 
-    /UploadFile
+    /UploadFile?ConversationId=555
 
 方法
 
