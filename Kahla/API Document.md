@@ -201,11 +201,11 @@
 
 ```json
 {
-    "value": "https://oss.aiursoft.com/Userfiles/e27bb7e01c534f8796118e16af34ea99.png",
-    "message": "Successfully uploaded your file!",
+    "savedFileName": "a.txt",
+    "fileKey": 1299,
+    "fileSize": 19,
     "code": 0,
-    "fileKey": 345,
-    "savedFileName": "myfile.png"
+    "message": "Successfully uploaded your file!"
 }
 ```
 
