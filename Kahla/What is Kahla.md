@@ -27,7 +27,7 @@
 * [打开卡拉的官方网站](https://kahla.aiursoft.com)
 * [从源码运行卡拉](https://aiursoft.visualstudio.com/Kahla/_git/Kahla.App)
 * [从源码运行卡拉的服务器](https://aiursoft.visualstudio.com/_git/Kahla)
-* [访问卡拉的API文档](./API%20Document.md)
+* [访问卡拉的API文档](./Before%20connecting.md)
 
 ## 为卡拉进行贡献
 

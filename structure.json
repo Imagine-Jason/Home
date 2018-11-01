@@ -92,7 +92,19 @@
                 "articleTitle": "What is Kahla"
             },
             {
-                "articleTitle": "API Document"
+                "articleTitle": "Before connecting"
+            },
+            {
+                "articleTitle": "Authentication"
+            },
+            {
+                "articleTitle": "Files"
+            },
+            {
+                "articleTitle": "Friendship"
+            },
+            {
+                "articleTitle": "Group"
             }
         ]
     }
