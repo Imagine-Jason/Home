@@ -52,12 +52,13 @@
     },
     {
         "collectionTitle": "Authentication",
-        "articles": [
-            {
-                "articleTitle": "OAuth"
-            }
-        ],
+        "articles": [],
         "docAPIAddress": "https://api.aiursoft.com/doc"
+    },
+    {
+        "collectionTitle": "Development",
+        "articles": [],
+        "docAPIAddress": "https://developer.aiursoft.com/doc"
     },
     {
         "collectionTitle": "Object Storage",
