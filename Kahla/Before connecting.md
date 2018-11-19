@@ -6,13 +6,11 @@
 
 | 服务器地址                                | 允许跨域                               | 限制Cookie | 分支   | 用途                               | 对应卡拉客户端 |
 |-|-|-|-|-|-|
-| kahla.server.aiursoft.com | https://kahla.app.aiursoft.com         | 是             | master | 承载生产版本卡拉客户端的数据通讯   | master |
-| staging.kahla.server.aiursoft.com | https://staging.kahla.app.aiursoft.com | 是             | dev    | 承载预部署版本卡拉客户端的数据通讯 | dev |
-| dev.kahla.server.aiursoft.com | http://localhost:8001                  | 否             | dev    | 用于开发者本机调试                 | 本地 |
+| server.kahla.app | https://web.kahla.app         | 是             | master | 承载生产版本卡拉服务器   | master |
+| staging.server.kahla.app | https://staging.kahla.app | 是             | dev    | 承载预部署版本卡拉服务器 | dev |
+| dev.server.kahla.app | http://localhost:8001                  | 否             | dev    | 用于开发者本机调试卡拉App                 | 本地 |
 
 如果你是卡拉的客户端贡献者，请注意在调试环境使用调试API，在预部署环境使用域部署API，在生产环境使用生产API。
-
-文档之后的请求地址，均表示在上面的API地址后增加`/api`的内容。
 
 ## 身份认证
 
