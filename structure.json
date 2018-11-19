@@ -56,7 +56,8 @@
             {
                 "articleTitle": "OAuth"
             }
-        ]
+        ],
+        "docAPIAddress": "https://api.aiursoft.com/doc"
     },
     {
         "collectionTitle": "Object Storage",
