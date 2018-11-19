@@ -74,9 +74,6 @@
         "articles": [
             {
                 "articleTitle": "What is Stargate"
-            },
-            {
-                "articleTitle": "API Document"
             }
         ],
         "docAPIAddress": "https://stargate.aiursoft.com/doc"
