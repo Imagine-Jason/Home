@@ -64,7 +64,8 @@
             {
                 "articleTitle": "What is OSS"
             }
-        ]
+        ],
+        "docAPIAddress": "https://oss.aiursoft.com/doc"
     },
     {
         "collectionTitle": "Stargate",
@@ -75,7 +76,8 @@
             {
                 "articleTitle": "API Document"
             }
-        ]
+        ],
+        "docAPIAddress": "https://stargate.aiursoft.com/doc"
     },
     {
         "collectionTitle": "Pylon",
@@ -93,22 +95,8 @@
             },
             {
                 "articleTitle": "Before connecting"
-            },
-            {
-                "articleTitle": "Authentication"
-            },
-            {
-                "articleTitle": "Conversation"
-            },
-            {
-                "articleTitle": "Files"
-            },
-            {
-                "articleTitle": "Friendship"
-            },
-            {
-                "articleTitle": "Group"
             }
-        ]
+        ],
+        "docAPIAddress": "https://staging.server.kahla.app/doc"
     }
 ]
