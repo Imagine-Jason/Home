@@ -1,12 +1,12 @@
 # Welcome to the Aiursoft Developer Center
 
-welcome!
+Welcome!
 
 The current documentation is the center of all learning, access, and contributions to the Aiursoft technology stack.
 
-    Note: Please note that please do not mention all Issues to this Repo, but submit them to the Repo where the specific project is located. This Repo's Issue is limited to Aiursoft's overall work order request.
+    Note: Please note that please do not mention all Issues to this Repo, but submit them to the Repo where the specific project is located. This Repo's Issue is limited to Aiursoft's overall work order request.
 
-## start immediately
+## Start immediately
 
 If you are a newcomer to Aiursoft and want to quickly learn about its complete technical system, please refer to the following:
 
