@@ -16,17 +16,17 @@
 
 卡拉作为Aiursoft微服务体系中的一个子服务存在。享受Aiursoft所有高层应用的所有权限。并且，卡拉支持密码认证功能，也就是说卡拉的用户并非必须通过OAuth认证来登录卡拉。
 
-卡拉依赖Aiursoft Stargate来实现消息推送。依赖Aiursoft OSS来存储用户之间发送的图片和文件。
+卡拉依赖[Aiursoft Stargate](../Stargate/What%20is%20Stargate.md)来实现消息推送。依赖[Aiursoft OSS](../Object%20Storage/What%20is%20OSS.md)来存储用户之间发送的图片和文件。
 
 ## 继续阅读
 
 如果你计划使用、开发、部署、贡献卡拉，请访问下列链接：
 
-* [立即打开卡拉Web版](https://kahla.app.aiursoft.com)
-* [立即打开卡拉生产服务器](https://kahla.server.aiursoft.com)
-* [打开卡拉的官方网站](https://kahla.aiursoft.com)
-* [从源码运行卡拉](https://aiursoft.visualstudio.com/Kahla/_git/Kahla.App)
-* [从源码运行卡拉的服务器](https://aiursoft.visualstudio.com/_git/Kahla)
+* [立即打开卡拉Web版](https://web.kahla.app)
+* [立即打开卡拉生产服务器](https://server.kahla.app)
+* [打开卡拉的官方网站](https://www.kahla.app)
+* [从源码运行卡拉](https://github.com/AiursoftWeb/Kahla.App)
+* [从源码运行卡拉的服务器](https://github.com/AiursoftWeb/Kahla)
 * [访问卡拉的API文档](./Before%20connecting.md)
 
 ## 为卡拉进行贡献
