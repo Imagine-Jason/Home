@@ -1,35 +1,35 @@
-# 欢迎来到Aiursoft开发人员中心
+# Welcome to the Aiursoft Developer Center
 
-欢迎!
+welcome!
 
-当前文档是关于Aiursoft技术栈的全部学习、接入、贡献的中心。
+The current documentation is the center of all learning, access, and contributions to the Aiursoft technology stack.
 
-    注明: 请注意，请不要把所有的Issue提到本Repo，而是将它们提交到具体的项目所在的Repo中。本Repo的Issue仅限Aiursoft的整体工单请求。
+    Note: Please note that please do not mention all Issues to this Repo, but submit them to the Repo where the specific project is located. This Repo's Issue is limited to Aiursoft's overall work order request.
 
-## 立即开始
+## start immediately
 
-如果你是参与Aiursoft的新人，想要快速了解它的整套技术体系，请参考下面内容：
+If you are a newcomer to Aiursoft and want to quickly learn about its complete technical system, please refer to the following:
 
-* [学习路线图](./Before%20starting.md)
-* [API表](#)
-* [SDK下载](#)
-* [快速构建一个基于Aiursoft的应用](#)
+* [Learning Roadmap] (./Before%20starting.md)
+* [API Table](#)
+* [SDK Download](#)
+* [Quickly build an Aiursoft-based application] (#)
 
-如果你的时间充足，希望将全套技术体系应用到你自己的项目或企业中，请详细阅读下面内容：
+If you have enough time and want to apply the full technical system to your own project or business, please read the following:
 
-* [如何从源码编译](#)
-* [如何将全部项目部署在企业计算集群中](../Deployment/Getting%20Started.md)
-* [如何贡献](../Getting%20Involed/How%20to%20contribute.md)
+* [How to compile from source] (#)
+* [How to deploy all projects in an enterprise computing cluster] (../Deployment/Getting%20Started.md)
+* [How to contribute] (../Getting%20Involed/How%20to%20contribute.md)
 
-## Aiursoft平台
+## Aiursoft Platform
 
-Aiursoft平台是一个由众多组件构成的微服务平台，它的不同服务都包含了不同特性。这包括了应用权限认证和授权系统、用户统一身份认证、对象存储系统、消息队列、文档中心、账户管理中心等。
+The Aiursoft platform is a microservices platform consisting of a number of components, each with different features. This includes application rights authentication and authorization systems, user unified identity authentication, object storage systems, message queues, document centers, account management centers, and more.
 
-* [应用认证系统](../Development/API.md)
-* [用户认证系统](../Authentication/OAuth.md)
-* [对象存储系统](../Object%20Storage/What%20is%20OSS.md)
-* [消息队列](../Stargate/What%20is%20Stargate.md)
+* [Application Authentication System] (../Development/API.md)
+* [User Authentication System] (../Authentication/OAuth.md)
+* [Object Storage System] (../Object%20Storage/What%20is%20OSS.md)
+* [Message Queue] (../Stargate/What%20is%20Stargate.md)
 
-## 文档的语言
+## Document language
 
-虽然看起来目前文档是中文的，但是Aiursoft的价值观是优先尊重英文需求。我们还在努力构建各个语言的文档。如果你愿意参与文档的翻译工作，欢迎[贡献文档](https://github.com/AiursoftWeb/Home)
+Aiursoft's values are prioritized to respect English needs. We are still working hard to build documentation for each language. If you are willing to participate in the translation of the documentation, please welcome [Contribution Documentation] (https://github.com/AiursoftWeb/Home)
