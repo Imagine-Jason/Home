@@ -93,6 +93,10 @@
                 "articleTitle": "What is Kahla"
             },
             {
+                "articleTitle": "How to build Kahla",
+                "articleAddress": "https://raw.githubusercontent.com/AiursoftWeb/Kahla.App/master/README.md"
+            },
+            {
                 "articleTitle": "Before connecting"
             }
         ],
