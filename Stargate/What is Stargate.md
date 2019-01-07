@@ -43,4 +43,4 @@
 如果你需要在你的项目中使用星门，请遵循下列步骤
 
 * [在Aiursoft Developer Center创建一个新的App](https://developer.aiursoft.com/Apps)
-* [阅读星门的API文档](./API%20Document.md)
+* [阅读星门的API文档](./Channel.md)
