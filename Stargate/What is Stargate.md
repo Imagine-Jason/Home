@@ -2,7 +2,7 @@
 
 Stargate is a message queue built on .NET Core to help Aiursoft's microservices system communicate in real time.
 
-## Stargate is suitable for what application
+## Which application is Stargate suitable
 
 Stargate acts as a message queue for handling the issue of pushing all complex events in turn. In the Stargate, the issuer of the event is called the `producer` and the recipient of the event is called the `consumer`.
 
@@ -15,11 +15,11 @@ Many applications can use Stargate to process message pushes, which includes:
 
 When Stargate is working, you need to create a message channel first, and the consumer connects to the channel. If you need to push the message to the consumer, the producer can use the Restful API.
 
-## Stargate Supported Protocol
+## Supported protocol
 
 At present, Stargate only supports the WebSocket protocol.
 
-## Stargate message processing
+## Message processing
 
 The consumer can only receive messages from the producer after the connection is successful.
 
@@ -37,7 +37,7 @@ The life of the channel itself is 24 hours. In the channel, the server will only
 
 It is not responsible for checking that the consumer is actually reading the message and is not responsible for receiving any message from the consumer.
 
-## continue reading
+## Continue reading
 
 If you need to use Stargate in your project, please follow the steps below
 
