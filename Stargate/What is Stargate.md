@@ -39,7 +39,7 @@ It is not responsible for checking that the consumer is actually reading the mes
 
 ## Continue reading
 
-If you need to use Stargate in your project, please follow the steps below
+If you plan to use Stargate in your project, please follow the steps below
 
-* [Create a new app in the Aiursoft Developer Center] (https://developer.aiursoft.com/Apps)
-* [Read Stargate API Documentation] (./Channel.md)
+* [Create a new app in the Aiursoft Developer Center](https://developer.aiursoft.com/Apps)
+* [Read Stargate API Documentation](./Channel.md)
