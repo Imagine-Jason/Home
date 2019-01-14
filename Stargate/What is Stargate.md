@@ -1,46 +1,45 @@
-# 星门是什么
+# What is Stargate
 
-星门（Stargate）是基于.NET Core构建的用于帮助Aiursoft微服务体系实现实时通讯的消息队列。
+Stargate is a message queue built on .NET Core to help Aiursoft's microservices system communicate in real time.
 
-## 星门适用于什么应用
+## Stargate is suitable for what application
 
-星门作为消息队列，用于处理将所有复杂的事件依次推送的问题。在星门中，事件的发出人称为`生产者`，事件的接受人称为`消费者`。
+Stargate acts as a message queue for handling the issue of pushing all complex events in turn. In the Stargate, the issuer of the event is called the `producer` and the recipient of the event is called the `consumer`.
 
-很多应用都可以使用星门处理消息推送，这包含：
+Many applications can use Stargate to process message pushes, which includes:
 
-* 即时消息App
-* 需要实时响应的对战游戏
-* 高度即时性的Web应用，例如：论坛
-* 高并发但单一任务处理缓慢的Web应用
-* 跨设备交互的应用
+* Instant Messaging App
+* Battle game that requires real-time response
+* Highly immediacy web applications, such as forums
+* Cross-device interaction applications
 
-星门在工作时，需要首先创建消息频道，消费者再连接到频道中。如果需要把消息推送给消费者，生产者可以使用Restful API。
+When Stargate is working, you need to create a message channel first, and the consumer connects to the channel. If you need to push the message to the consumer, the producer can use the Restful API.
 
-## 星门支持的协议
+## Stargate Supported Protocol
 
-目前星门仅支持WebSocket协议。
+At present, Stargate only supports the WebSocket protocol.
 
-## 星门的消息处理
+## Stargate message processing
 
-消费者仅能收到连接成功后生产者发出的消息。
+The consumer can only receive messages from the producer after the connection is successful.
 
-星门不负责存储消息。消息一旦被所有消费者处理后会立即被删除。
+Stargate is not responsible for storing messages. Messages are deleted as soon as they are processed by all consumers.
 
-星门的消息暂存期为1分钟。也就是说在生产者提交给星门消息后，消费者必须在1分钟内处理该消息。否则该消息会丢失。
+The message period of Stargate is 1 minute. That is to say, after the producer submits the message to the Stargate, the consumer must process the message within 1 minute. Otherwise, the message will be lost.
 
-## 星门的生命周期
+## Stargate lifecycle
 
-它本身作为广播平台，允许开发人员在其中为自己的特定应用新建若干个频道。不同应用之间不能访问对方的频道。每个频道都会有连接密钥。
+It acts as a broadcast platform, allowing developers to create several new channels for their specific applications. You cannot access each other's channels between different applications. Each channel will have a connection key.
 
-它本身作为推送工具，消费者可以使用WebSocket协议连接到特定的频道。在消费者连接频道后，生产者对频道推送了任何信息，所有该频道的消费者端都会收到该信息。
+It acts as a push tool itself, and consumers can connect to specific channels using the WebSocket protocol. After the consumer connects to the channel, the producer pushes any information to the channel, and all consumers of that channel receive the message.
 
-频道本身的生命是24小时。在频道中，服务器只会把最原始的事件内容推送过来，不会进行任何编码和大小写转换，也不会使用Json或XML。
+The life of the channel itself is 24 hours. In the channel, the server will only push the most primitive event content, without any encoding and case conversion, and will not use JSON or XML.
 
-它不负责检查消费者是真正阅读了消息，也不负责接收消费者对其发出的任何消息。
+It is not responsible for checking that the consumer is actually reading the message and is not responsible for receiving any message from the consumer.
 
-## 继续阅读
+## continue reading
 
-如果你需要在你的项目中使用星门，请遵循下列步骤
+If you need to use Stargate in your project, please follow the steps below
 
-* [在Aiursoft Developer Center创建一个新的App](https://developer.aiursoft.com/Apps)
-* [阅读星门的API文档](./Channel.md)
+* [Create a new app in the Aiursoft Developer Center] (https://developer.aiursoft.com/Apps)
+* [Read Stargate API Documentation] (./Channel.md)
