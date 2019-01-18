@@ -4,7 +4,7 @@
 
 卡拉的服务器共有三台。
 
-| 服务器地址                                | 允许跨域                               | 限制Cookie | 分支   | 用途                               | 对应卡拉客户端 |
+| 服务器地址                                | 允许跨域                               | 限制Cookie | 代码分支   | 用途                               | 对应卡拉客户端 |
 |-|-|-|-|-|-|
 | server.kahla.app | https://web.kahla.app         | 是             | master | 承载生产版本卡拉服务器   | master |
 | staging.server.kahla.app | https://staging.kahla.app | 是             | dev    | 承载预部署版本卡拉服务器 | dev |
