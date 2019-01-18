@@ -1,29 +1,29 @@
-# 卡拉API文档
+# Kahla API Document
 
-## 服务器地址
+## Server address
 
-卡拉的服务器共有三台。
+There are three servers for Kahla.
 
-| 服务器地址                                | 允许跨域                               | 限制Cookie | 代码分支   | 用途                               | 对应卡拉客户端 |
+| Server Address | Allow Cross-Domain | Limit Cookies | Code Branch | Usage | Corresponding Kahla Client |
 |-|-|-|-|-|-|
-| server.kahla.app | https://web.kahla.app         | 是             | master | 承载生产版本卡拉服务器   | master |
-| staging.server.kahla.app | https://staging.kahla.app | 是             | dev    | 承载预部署版本卡拉服务器 | dev |
-| dev.server.kahla.app | http://localhost:8001                  | 否             | dev    | 用于开发者本机调试卡拉App                 | 本地 |
+server.kahla.app | https://web.kahla.app | Yes | master | hosting production version of Kahla server | master |
+| staging.server.kahla.app | https://staging.kahla.app | Yes | dev | hosting staging version of the Kahla server | dev |
+| dev.server.kahla.app | http://localhost:8001 | No | dev | For Developers Local Debugging Kahla App | Local |
 
-## 数据库
+## Database
 
-其中，预部署服务器和本机调试服务器的数据库是相同的，该数据库可能会被定时清理，不保证数据的持久性。
+The database of the staging server and the local debugging server is the same one, and the database may be cleaned regularly, and the data persistence is not guaranteed.
 
-生成环境的卡拉服务器独立使用生成数据库，该数据库将不会被清理。
+The production Kahla server uses an independent database, and the database will not be cleaned up.
 
-如果你是卡拉的客户端贡献者，请注意在调试环境使用调试API，在预部署环境使用域部署API，在生产环境使用生产API。
+If you are a contributor to Kahla, please note that the debugging API is used in the debugging environment, the staging API is used in the pre-deployment environment, and the production API is used only in the production environment.
 
-## 身份认证
+## Authentication
 
-卡拉的服务器采用了基于Cookie的身份认证。也就是说，在访问所有需要登录权限的API时，必须携带所有Cookie。
+Carla's servers use cookie-based authentication. In other words, all cookies must be carried when accessing all APIs that require login privileges.
 
-卡拉的客户端在运行时，必须工作在目标服务器所允许的跨域地址内，否则将无法携带Cookie。
+When Kara's client is running, it must work in the cross-domain address allowed by the target server, otherwise it will not be able to carry cookies.
 
-## 通讯协议
+## Protocol
 
-卡拉的所有服务器通讯都使用强制HTTPS协议和HSTS标准。
+All of Kara's server communications use the mandatory HTTPS protocol and the HSTS standard.
