@@ -22,8 +22,8 @@ If you are a contributor to Kahla, please note that the debugging API is used in
 
 Carla's servers use cookie-based authentication. In other words, all cookies must be carried when accessing all APIs that require login privileges.
 
-When Kara's client is running, it must work in the cross-domain address allowed by the target server, otherwise it will not be able to carry cookies.
+When Kahla's client is running, it must work in the cross-domain address allowed by the target server, otherwise it will not be able to carry cookies.
 
 ## Protocol
 
-All of Kara's server communications use the mandatory HTTPS protocol and the HSTS standard.
+All of Kahla's server communications use the mandatory HTTPS protocol and the HSTS standard.
