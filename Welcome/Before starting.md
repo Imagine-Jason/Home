@@ -1,10 +1,10 @@
-# 开始之前
+# Before starting
 
-在开始讨论Aiursoft的相关服务API之前，请务必阅读此内容。这里将会详细介绍一些宏观参数。
+Be sure to read this before you begin to connect the service APIs for Aiursoft. Some parameters are described here.
 
-## 基础API形式
+## Basic API format
 
-Aiursoft全部各项微服务体系均采用下列两种API进行通讯：
+Aiursoft all services are using the following API protocol:
 
 * HTTP
 * WebSocket
