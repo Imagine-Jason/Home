@@ -11,13 +11,13 @@ Aiursoft all services are using the following API protocol:
 
 其中，Aiursoft的HTTP协议具有下列特点:
 
-* 所有服务直接完整对互联网公开
-* 所有通信强制使用`HTTPS`
-* 所有通信支持`HTTP/2`
-* 所有接口返回值类型均为`Json`
-* 所有接口返回值编码均为`utf-8`
-* 所有接口返回值均为英文
-* 所有接口请求的参数编码都为`x-www-form-urlencoded`
+* All services are directly opened to the entire Internet.
+* All communication forced using trusted `HTTPS` certs.
+* All protocol supports `HTTP/2`.
+* All APIs' response type is `Json`.
+* All response is encoded with `utf-8`.
+* Everything respect English.
+* All APIs' input format is `x-www-form-urlencoded`.
 
 Aiursoft所有HTTP通讯的返回值中，都具有两个参数，也就是`code`和`message`。例如：
 
