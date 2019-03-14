@@ -1,7 +1,9 @@
 # Welcome to Aiursoft Wiki Center
 
-[![Build status](https://aiursoft.visualstudio.com/Nexus/_apis/build/status/Doc%20CI)](https://aiursoft.visualstudio.com/Nexus/_build/latest?definitionId=11)
+Welcome! This is Aiursoft Wiki Center. Everything in this repo was written in markdown.
 
-Welcome!
+We will deploy the entire wiki to our wiki center website. So please view this at [Aiursoft Wiki Center](https://wiki.aiursoft.com).
 
-Please view this at [Aiursoft Wiki Center](https://wiki.aiursoft.com)
+## How to contribute
+
+Direclty open an issue or a pull request is welcomed.
