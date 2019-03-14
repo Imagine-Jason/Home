@@ -54,10 +54,15 @@
         ]
     },
     {
-        "collectionTitle": "Authentication",
+        "collectionTitle": "User Authentication",
         "articles": [],
         "docAPIAddress": "https://api.aiursoft.com/doc"
     },
+    {
+        "collectionTitle": "App Authentication",
+        "articles": [],
+        "docAPIAddress": "https://archon.aiursoft.com/doc"
+    }
     {
         "collectionTitle": "Development",
         "articles": [],
