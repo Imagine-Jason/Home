@@ -6,4 +6,4 @@ We will deploy the entire wiki to our wiki center website. So please view this a
 
 ## How to contribute
 
-Direclty open an issue or a pull request is welcomed.
+Directly open an issue or a pull request is welcomed.
