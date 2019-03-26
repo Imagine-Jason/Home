@@ -9,3 +9,23 @@ Create a more open world. Aiursoft is focusing on open platform and open communi
 ## Code Principle
 
 The world is simple. So code simple.
+
+## Members
+
+### Anduin
+
+![Anduin2017](https://github.com/Anduin2017.png?size=70)
+
+anduin@aiursoft.com
+
+### xxyzz
+
+![xxyzz](https://github.com/xxyzz.png?size=70)
+
+xxyzz@aiursoft.com
+
+### EdgeNeko
+
+![EdgeNeko](https://github.com/hv0905.png?size=70)
+
+edgeneko@aiusoft.com
