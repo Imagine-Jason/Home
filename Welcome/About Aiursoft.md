@@ -10,12 +10,9 @@ Aiursoft is an international organization with people who wanna write something 
 
 > The world is simple. So code simple.
 
-## Official Language
+Website: [www.aiursoft.com](https://www.aiursoft.com)
 
-* English
-* Simplified Chinese
-
-## Members
+## Active Team members
 
 ### Anduin
 
