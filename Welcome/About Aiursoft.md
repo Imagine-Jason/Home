@@ -4,11 +4,11 @@ Aiursoft is an international organization with people who wanna write something 
 
 ## Target of Aiursoft
 
-Create a more open world. Aiursoft is focusing on open platform and open communication.
+> Create a more open world. Aiursoft is focusing on open platform and open communication.
 
 ## Code Principle
 
-The world is simple. So code simple.
+> The world is simple. So code simple.
 
 ## Members
 
@@ -16,16 +16,16 @@ The world is simple. So code simple.
 
 ![Anduin2017](https://github.com/Anduin2017.png?size=70)
 
-anduin@aiursoft.com
+[anduin@aiursoft.com](mailto:anduin@aiursoft.com)
 
 ### xxyzz
 
 ![xxyzz](https://github.com/xxyzz.png?size=70)
 
-xxyzz@aiursoft.com
+[xxyzz@aiursoft.com](mailto:xxyzz@aiursoft.com)
 
 ### EdgeNeko
 
 ![EdgeNeko](https://github.com/hv0905.png?size=70)
 
-edgeneko@aiusoft.com
+[edgeneko@aiusoft.com](mailto:edgeneko@aiursoft.com)
