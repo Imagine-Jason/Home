@@ -10,22 +10,27 @@ Aiursoft is an international organization with people who wanna write something 
 
 > The world is simple. So code simple.
 
+## Official Language
+
+* English
+* Simplified Chinese
+
 ## Members
 
 ### Anduin
 
 ![Anduin2017](https://github.com/Anduin2017.png?size=70)
 
-[anduin@aiursoft.com](mailto:anduin@aiursoft.com)
+Email: [anduin@aiursoft.com](mailto:anduin@aiursoft.com) GitHub [Anduin2017](https://github.com/Anduin2017)
 
 ### xxyzz
 
 ![xxyzz](https://github.com/xxyzz.png?size=70)
 
-[xxyzz@aiursoft.com](mailto:xxyzz@aiursoft.com)
+Email: [xxyzz@aiursoft.com](mailto:xxyzz@aiursoft.com) GitHub [xxyzz](https://github.com/xxyzz)
 
 ### EdgeNeko
 
 ![EdgeNeko](https://github.com/hv0905.png?size=70)
 
-[edgeneko@aiusoft.com](mailto:edgeneko@aiursoft.com)
+Email: [edgeneko@aiusoft.com](mailto:edgeneko@aiursoft.com) GitHub [hv0905](https://github.com/hv0905)
