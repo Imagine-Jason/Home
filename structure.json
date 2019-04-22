@@ -81,6 +81,13 @@
         "docAPIAddress": "https://oss.aiursoft.com/doc"
     },
     {
+        "collectionTitle": "Integrated Website",
+        "articles": [
+            
+        ],
+        "docAPIAddress": "https://probe.aiursoft.com/doc"
+    },
+    {
         "collectionTitle": "Stargate",
         "articles": [
             {
