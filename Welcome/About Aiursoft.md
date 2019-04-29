@@ -31,3 +31,9 @@ Email: [xxyzz@aiursoft.com](mailto:xxyzz@aiursoft.com) GitHub: [xxyzz](https://g
 ![EdgeNeko](https://github.com/hv0905.png?size=70)
 
 Email: [edgeneko@aiusoft.com](mailto:edgeneko@aiursoft.com) GitHub: [hv0905](https://github.com/hv0905)
+
+### Xiangrui
+
+![Xiangrui](https://github.com/Xiangrui2019.png?size=70)
+
+Email: [xiangrui@aiursoft.com](mailto:xiangrui@aiursoft.com) GitHub: [Xiangrui2019](https://github.com/Xiangrui2019)
